@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>webpage using jquery Solution 3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#main").hide();
+  });
+  $("#show").click(function(){
+    $("#main").show();
+  });
+});
+$(document).ready(function(){
+  $("#m").click(function(){
+    $("p").css("background-color", "#00a8cc");
+  });
+});
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#main").append(" <b>Appended text</b>.");
+  });
+
+});
+$(document).ready(function(){
+  $("#remove").click(function()
+  {
+    $("h3").remove();
+  });
+});
+
+$(document).ready(function(){
+  $("#faded").click(function(){
+    $("img").fadeOut("slow");
+  });
+});
+
+$(document).ready(function(){
+  $("#ani").click(function(){
+    $("img").animate({
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    });
+  });
+});
+$(document).ready(function(){
+  $("#res").click(function(){
+    $("img").width(100).height(100);
+  });
+});
+
+$(document).ready(function(){
+  $("p").filter(".intro").css("background-color", "#DBD5A4");
+});
+
+</script>
+</head>
+<body style="background-color:#d0d8cf">
+  <style>
+    .btn {
+  border: none;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: #222;
+  padding: 17px 60px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.btn span {
+  position: relative; 
+  z-index: 1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 490%;
+  width: 140%;
+  background: #78c7d2;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.btn:hover:after {
+  -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+  </style>
+<center>
+<h1>This is a program to implemement various Aspects of jquery</h1>
+<h2>this is a paragraph heading </h2>
+<center><a href="https://imgbb.com/"><img src="https://i.ibb.co/WKpy79p/a3ww-Qy7-460s.jpg" alt="a3ww-Qy7-460s" border="0"></a></center>
+<h3>the heading will remove on clicking remove button</h3></center>
+<p id="main">this line will hide on clicking hide and show on clicking show button </p>
+<p style="background-color:#05dfd7">This is a paragraph.</p>
+<p style="background-color:#fbd46d">This is a paragraph.</p>
+<p style="background-color:#e79cc2">This is a paragraph.</p><br><br>
+<center><p class="intro">I am trying traversing.</p>
+<p class="intro">using filter method for traversing.</p></center>
+
+<button class="btn" id="hide">Hide</button><br>
+<button class="btn" id="show">Show</button><br>
+<button class="btn" id="m">same background-color</button><br>
+<button class="btn" id="btn1">Append text</button><br>
+<button class="btn" id="remove">Remove element</button><br>
+<button class="btn" id="faded"> fade out image</button><br>
+<button class="btn" id="ani">Start Animation</button><br>
+<button class="btn" id="res">Resize image</button><br>
+
+</body>
+</html>
